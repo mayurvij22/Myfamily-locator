@@ -1,0 +1,44 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /families/{code}/members/{uid} {
+
+      function isSignedIn() {
+        return request.auth != null;
+      }
+
+      function isMemberOf(familyCode) {
+        return exists(/databases/$(database)/documents/families/$(familyCode)/members/$(request.auth.uid));
+      }
+
+      function isOwner() {
+        return isSignedIn() && request.auth.uid == uid;
+      }
+
+      function validMember() {
+        let d = request.resource.data;
+        return d.uid == uid
+          && d.name is string && d.name.size() > 0 && d.name.size() <= 40
+          && (!('sharing' in d) || d.sharing is bool)
+          && (!('lat' in d) || d.lat is number)
+          && (!('lng' in d) || d.lng is number)
+          && (!('updatedAt' in d) || d.updatedAt is int)
+          && (!('stayingSince' in d) || d.stayingSince is int);
+      }
+
+      // Only people who have joined this family (own doc exists) can see its members.
+      allow read: if isSignedIn() && isMemberOf(code);
+
+      // Everyone writes only their own doc.
+      allow create, update: if isOwner() && validMember() && code.size() >= 6 && code.size() <= 8;
+      allow delete: if isOwner();
+    }
+
+    // Everything else is closed.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

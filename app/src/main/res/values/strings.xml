@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">FamilyTracker</string>
+
+    <string name="channel_tracking">Location sharing</string>
+    <string name="channel_tracking_desc">Shown while FamilyTracker shares your location</string>
+    <string name="channel_alerts">Stay alerts</string>
+    <string name="channel_alerts_desc">When a family member stays at one place for 3 hours</string>
+    <string name="notif_sharing">Sharing location with family</string>
+    <string name="notif_paused">Location sharing paused · stay alerts on</string>
+    <string name="notif_family">Family %1$s</string>
+    <string name="alert_title">%1$s is still at %2$s</string>
+    <string name="alert_text">%1$s has been at %2$s for %3$s</string>
+
+    <string name="welcome_title">FamilyTracker</string>
+    <string name="welcome_tagline">See where your family is, and know when someone has stayed put for a while.</string>
+    <string name="get_started">Get started</string>
+
+    <string name="join_title">Join your family</string>
+    <string name="join_subtitle">Everyone in the family uses the same code. The first person generates it.</string>
+    <string name="your_name">Your name</string>
+    <string name="family_code">Family code</string>
+    <string name="generate_code">Generate new code</string>
+    <string name="join">Join</string>
+    <string name="error_name">Enter your name</string>
+    <string name="error_code">Code must be 6–8 letters or digits</string>
+
+    <string name="perm_step">Step %1$d of %2$d</string>
+    <string name="perm_location_title">Allow location</string>
+    <string name="perm_location_body">FamilyTracker shares your location with your family and shows how far away they are.</string>
+    <string name="perm_background_title">Allow all the time</string>
+    <string name="perm_background_body">To keep sharing when the app is closed, choose “Allow all the time” on the next screen.</string>
+    <string name="perm_background_hint">Not offered? Open app settings → Permissions → Location → Allow all the time.</string>
+    <string name="perm_notifications_title">Turn on notifications</string>
+    <string name="perm_notifications_body">Get alerted when a family member has been at the same place for 3 hours.</string>
+    <string name="allow">Allow</string>
+    <string name="open_settings">Open app settings</string>
+
+    <string name="search_hint">Where is my family?</string>
+    <string name="family_label">Family %1$s</string>
+    <string name="your_family">Your family</string>
+    <string name="you">You</string>
+    <string name="invite">Invite</string>
+    <string name="no_members">No one else yet. Share the code %1$s with your family.</string>
+    <string name="share_code">Share family code</string>
+    <string name="share_code_text">Join my family on FamilyTracker. Family code: %1$s</string>
+    <string name="share_my_location">Share my location</string>
+    <string name="leave_family">Leave family</string>
+    <string name="leave_confirm_title">Leave family?</string>
+    <string name="leave_confirm_body">Your location will be removed and tracking will stop on this phone.</string>
+    <string name="leave">Leave</string>
+    <string name="cancel">Cancel</string>
+    <string name="sharing_paused">Your location is paused</string>
+    <string name="weak_location">Weak location signal · ±%1$s</string>
+    <string name="battery_banner">Battery optimization may stop tracking</string>
+    <string name="fix">Fix</string>
+    <string name="recenter">Recenter</string>
+    <string name="center_on_map">Center on map</string>
+    <string name="navigate">Navigate</string>
+    <string name="navigate_last_known">Directions go to their last shared location (%1$s).</string>
+    <string name="show_all_family">Show all family</string>
+    <string name="distance">Distance</string>
+    <string name="at_this_place">At this place</string>
+    <string name="last_update">Last update</string>
+</resources>
